@@ -23,6 +23,8 @@ public class ClientController {
 
 	@Autowired
 	private IClientService clientService;
+	
+	
 	@Autowired
 	private IFlickrService flickrService;
 
