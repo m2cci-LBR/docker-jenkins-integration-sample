@@ -41,7 +41,6 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <%@ include file="/WEB-INF/views/menu-top/topMenu.jsp"%>
-            
             <%@ include file="/WEB-INF/views/menu-left/leftMenu.jsp"%>
             <!-- /.navbar-static-side -->
         </nav>

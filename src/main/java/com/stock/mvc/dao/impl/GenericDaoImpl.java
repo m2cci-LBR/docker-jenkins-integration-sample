@@ -1,5 +1,6 @@
 package com.stock.mvc.dao.impl;
 
+import java.beans.Transient;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -39,7 +40,7 @@ public class GenericDaoImpl<E> implements IGenericDao<E> {
 
 	@Override
 	public List<E> selectAll() {
-		Query query = em.createQuery("select t from" + type.getSimpleName() + "t");
+		Query query = em.createQuery(" select t from " + type.getSimpleName() + " t");
 		return query.getResultList();
 	}
 
@@ -59,7 +60,7 @@ public class GenericDaoImpl<E> implements IGenericDao<E> {
 	// exemple de cette query : select t from Article A order by desc
 	@Override
 	public List<E> selectAll(String sortField, String sort) {
-		Query query = em.createQuery("select t from" + type.getSimpleName() + "t order by" + sortField + " " + sort);
+		Query query = em.createQuery("select t from " + type.getSimpleName() + " t order by " + sortField + " " + sort);
 		return query.getResultList();
 	}
 

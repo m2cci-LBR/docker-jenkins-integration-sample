@@ -9,8 +9,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	
 	
-	@RequestMapping (value="/home/blank", method = RequestMethod.GET)
+	@RequestMapping (value="/home/")
 	public String home() {
+		return "home/home";
+	}
+	
+	
+	
+	@RequestMapping (value="/home/blank", method = RequestMethod.GET)
+	public String blankHome() {
 		return "blank/blank";
 	}
 
